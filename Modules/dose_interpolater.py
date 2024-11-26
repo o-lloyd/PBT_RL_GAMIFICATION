@@ -152,7 +152,7 @@ def beam_interpolation(energy_data, beam_distance):
         higher_interpolation = interp1d(adjusted_higher_energies, energy_data[higher_energy]['dose'], kind='linear', fill_value="extrapolate")
 
 
-        return lambda x: (high_multiplier * higher_interpolation(x) + low_multiplier * lower_interpolation(x)), energy_bool   # Interpolate between the two energies
+        return lambda x: (high_multiplier * higher_interpolation(x) + low_multiplier * lower_interpolation(x)), energy_bool, energy   # Interpolate between the two energies
     
 
 

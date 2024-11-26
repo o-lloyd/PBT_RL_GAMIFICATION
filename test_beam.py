@@ -39,7 +39,7 @@ class beam_test:
 
     def phantom(self, cord_x, cord_y, angle):
 
-        beam_map, bool, dose_vals, dist_vals, dose_interpolation = ProtonBeamV4(cord_x, cord_y, angle,self.grid_x,self.grid_y,1.1,1.1,self.density_map,self.energy_data, phantom=True)
+        beam_map, bool, dose_vals, dist_vals, dose_interpolation, energy_val = ProtonBeamV4(cord_x, cord_y, angle,self.grid_x,self.grid_y,1.1,1.1,self.density_map,self.energy_data, phantom=True)
 
         if not bool:
             print("Invalid Coordiantes")
@@ -50,11 +50,11 @@ class beam_test:
         
         plt.figure(figsize=(12, 6)) 
 
-        plt.scatter(dist_vals, dose_vals, color='hotpink', s=25, marker="x", label="Voxel Dose")
+        plt.scatter(dist_vals, dose_vals, color='hotpink', s=25, marker="x", label="True Dose")
 
         plt.plot(np.linspace(0,dist_vals[-1], 500), dose_interpolation(np.linspace(0,dist_vals[-1], 500)), alpha=0.7,color="black", label="Interpolation")
 
-        plt.title('Proton beam dose values against water quivalent distance', fontsize=16)
+        plt.title(f'Proton beam dose values against water equivalent distance ({energy_val:.0f} MeV)', fontsize=16)
         plt.xlabel('Water Equivalent Distance', fontsize=14)
         plt.ylabel('Dose (Gy)', fontsize=14)
         plt.legend()

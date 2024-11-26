@@ -232,7 +232,7 @@ def ProtonBeamV4(spot_x, spot_y, angle, grid_x, grid_y, d_x, d_y, density_array,
     sp_distance_culm = np.cumsum(sp_distances)
     peak_distance = sp_distance_culm[peak_distance_cord]
 
-    dose_interpolation, energy_bool = beam_interpolation(energy_data, peak_distance)
+    dose_interpolation, energy_bool, energy_val = beam_interpolation(energy_data, peak_distance)
 
     if energy_bool == True:
 
@@ -278,7 +278,7 @@ def ProtonBeamV4(spot_x, spot_y, angle, grid_x, grid_y, d_x, d_y, density_array,
         final_spread = np.where(final_spread > 0.1, final_spread,0)
         
         if phantom:
-            return final_spread, beam_bool, dose_deposition, sp_distance_culm, dose_interpolation
+            return final_spread, beam_bool, dose_deposition, sp_distance_culm, dose_interpolation, energy_val
             
         else:
             return final_spread, beam_bool
