@@ -16,8 +16,6 @@ This repository provides a framework for setting up reinforcement learning (RL) 
 - [Contributing](#contributing)
 - [License](#license)
 - [Quick Start Example](#quick-start-example)
-- [Support](#support)
-- [Acknowledgements](#acknowledgements)
 - [Contact](#contact)
 
 ## Features
@@ -115,9 +113,9 @@ After processing the data, you can run the beam simulation to generate and visua
     - Generates dose vs. water equivalent distance plots.
 
 ## File Structure
-```bash:manual_install.sh
+```bash:file_structure.sh
    
-plaintext:file_structure.md
+
 proton-beam-therapy-rl/
 │
 ├── data_processing/
@@ -139,7 +137,7 @@ proton-beam-therapy-rl/
 │
 └── README.md
 
-    ```
+```
 
 
 - **data_processing/**: Contains the data processing scripts.
