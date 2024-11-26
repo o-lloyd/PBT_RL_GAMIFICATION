@@ -1,4 +1,4 @@
-matplotlib.pyplot
+matplotlib
 pydicom
 opencv-python
 scipy
