@@ -166,6 +166,16 @@ This project is licensed under the [MIT License](LICENSE).
     ```bash:test_beam.py
     python test_beam.py
     ```
+3. **View Generated Plots**
+
+    The script will display two plots:
+
+    - Dose vs. water equivalent distance plot for the phantom.
+    - Dose beam through a patient CT slice.
+
+    ![Dose vs. Water Equivalent Distance](readme_figures/dose_vs_wepl.png)
+
+    ![Dose inside patient slice](readme_figures/beam_patient_slice.png)
 
 Ensure that all dependencies are installed and the data paths in the scripts are correctly set according to your system.
 
