@@ -20,8 +20,12 @@ class beam_test:
 
 
     def single_beam(self, cord_x, cord_y, angle):
-
-        beam_map, bool = ProtonBeamV4(cord_x, cord_y, angle,self.grid_x,self.grid_y,1.1,1.1,self.density_map,self.energy_data)
+        beam_map, bool = ProtonBeamV4(
+            cord_x, cord_y, angle,
+            self.grid_x, self.grid_y,
+            1.1, 1.1,
+            self.density_map, self.energy_data
+        )
 
         if not bool:
             print("Invalid Coordinates")
@@ -29,10 +33,23 @@ class beam_test:
 
         beam_map[beam_map < 0.1] = np.nan
 
-        plt.imshow(self.density_map, cmap='bone')
-        im = plt.imshow(beam_map, cmap='jet', alpha=0.5)
+        # Define the central region dimensions
+        central_width = 200
+        central_height = 300
+        x_start = (self.grid_x - central_width) // 2
+        x_end = x_start + central_width
+        y_start = (self.grid_y - central_height-70) // 2
+        y_end = y_start + central_height
+
+        # Slice the density_map and beam_map to the central region
+        density_central = self.density_map[y_start:y_end, x_start:x_end]
+        beam_central = beam_map[y_start:y_end, x_start:x_end]
+
+        plt.imshow(density_central, cmap='bone')
+        im = plt.imshow(beam_central, cmap='jet', alpha=0.5)
         cbar = plt.colorbar(im)
         cbar.set_label(label="Dose (Gy)", size=15)
+        plt.title(f'Proton beam through a patient CT scan, \n centered at ({cord_x}, {cord_y}) with angle {angle} degrees', fontsize=13)
         plt.show()
 
         return 0
