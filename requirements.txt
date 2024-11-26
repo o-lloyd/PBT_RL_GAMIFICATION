@@ -1,0 +1,5 @@
+matplotlib.pyplot
+pydicom
+opencv-python
+scipy
+numpy
