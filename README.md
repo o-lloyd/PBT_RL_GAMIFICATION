@@ -94,7 +94,6 @@ Before running the beam simulation, you need to process the patient DICOM data.
     This will create processed data files, such as:
 
     - `pickles/example_dicom_processed_data.pkl`
-    - `pickles/beam_data.pkl`
 
 ### Running Beam Models
 
@@ -116,6 +115,8 @@ After processing the data, you can run the beam simulation to generate and visua
     - Generates dose vs. water equivalent distance plots.
 
 ## File Structure
+```bash:manual_install.sh
+   
 plaintext:file_structure.md
 proton-beam-therapy-rl/
 │
@@ -138,6 +139,8 @@ proton-beam-therapy-rl/
 │
 └── README.md
 
+    ```
+
 
 - **data_processing/**: Contains the data processing scripts.
 - **pickles/**: Stores processed data files.
@@ -147,31 +150,6 @@ proton-beam-therapy-rl/
 - **requirements.txt**: Lists Python dependencies.
 - **README.md**: Project documentation.
 
-## Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request with your improvements.
-
-1. **Fork the Repository**
-
-2. **Create a Feature Branch**
-
-    ```bash:contributing.sh
-    git checkout -b feature/YourFeature
-    ```
-
-3. **Commit Your Changes**
-
-    ```bash:contributing.sh
-    git commit -m "Add your message here"
-    ```
-
-4. **Push to the Branch**
-
-    ```bash:contributing.sh
-    git push origin feature/YourFeature
-    ```
-
-5. **Open a Pull Request**
 
 ## License
 
@@ -193,14 +171,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 Ensure that all dependencies are installed and the data paths in the scripts are correctly set according to your system.
 
-## Support
 
-If you encounter any issues or have questions, feel free to open an issue in the repository.
-
-## Acknowledgements
-
-- Thanks to the contributors and the open-source community for their invaluable resources and support.
-
-## Contact
 
 For further information, please contact [hayden@htibbals.com](mailto:hayden@htibbals.com).
