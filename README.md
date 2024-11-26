@@ -78,7 +78,7 @@ Before running the beam simulation, you need to process the patient DICOM data.
     Ensure that your DICOM files are placed in the appropriate directory as specified in `data_processing/data_processing.py`. By default, the base path is set to:
 
     ```python:data_processing/data_processing.py
-    base_path = r"C:\Users\hayde\Documents\Proton-Beam-Therapy-Reinforecement-Learning\ProtonBeamModel\data"
+    base_path = r"data"
     ```
 
 2. **Run Data Processing Script**

@@ -9,7 +9,7 @@ from pydicom.valuerep import IS
 import pickle
 from scipy.interpolate import interp1d
 
-base_path = r"C:\Users\hayde\Documents\Proton-Beam-Therapy-Reinforecement-Learning\ProtonBeamModel\data"
+base_path = r"data"
 
 dicom_data = {}
 
