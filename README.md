@@ -42,8 +42,8 @@ This repository provides a framework for setting up reinforcement learning (RL) 
 1. **Clone the Repository**
 
     ```bash:clone_repository.sh
-    git clone https://github.com/yourusername/proton-beam-therapy-rl.git
-    cd proton-beam-therapy-rl
+    git clone https://github.com/haydentbs/PBT_RL_GAMIFICATION.git
+    cd PBT_RL_GAMIFICATION
     ```
 
 2. **Set Up a Virtual Environment (Optional but Recommended)**
