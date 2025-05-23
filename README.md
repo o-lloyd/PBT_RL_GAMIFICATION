@@ -178,7 +178,3 @@ This project is licensed under the [MIT License](LICENSE).
     ![Dose inside patient slice](readme_figures/beam_patient_slice.png)
 
 Ensure that all dependencies are installed and the data paths in the scripts are correctly set according to your system.
-
-
-
-For further information, please contact [hayden@htibbals.com](mailto:hayden@htibbals.com).
